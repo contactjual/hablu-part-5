@@ -1,0 +1,113 @@
+* {
+    font-size: 30px;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgba(0, 0, 0, 0.334);
+}
+
+
+/* pseudo class  */
+ol {
+    background-color: rgb(220, 220, 220);
+    /* list-style: none; */
+    list-style-position: inside;
+}
+
+ol li:nth-child(2n) {
+    color: red;
+    padding-bottom: 20px;
+}
+
+ol li:nth-child(2n+1) {
+    color: green;
+    padding-bottom: 20px;
+}
+
+
+
+
+.flexbox .paren {
+    background-color: rgb(255, 145, 145);
+    height: 500px;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex-direction: column-reverse;
+    flex-direction: row-reverse;
+    flex-direction: row;
+    /* flex-flow: wrap row; */
+    
+    justify-content: center;
+    justify-content: end;
+    justify-content: start;
+    justify-content: space-around;
+    justify-content: space-between;
+    justify-content: space-evenly;
+
+    align-items: baseline;
+    align-items: center;
+    align-items: end;
+    align-items: flex-start;
+
+}
+
+
+.flexbox .paren div:nth-child(15) {
+    /* flex-grow: 3; */
+    /* flex-shrink: 1; */
+    /* flex-basis: 30%; */
+    /* flex: 3 1 30%; */
+    order: 1;
+}
+
+
+.flexbox .paren .child {
+    width: 100px;
+    height: 100px;
+    background-color: beige;
+}
+
+
+
+
+/* Grid */
+.grid .paren {
+    width: 1000px;
+    height: 543px;
+    border: 2px solid gainsboro;
+    padding: 10px;
+    margin: 100px auto;
+
+    display: grid;
+    grid-gap: 10px;
+    grid-template-rows: 70px 150px 200px 70px;
+    grid-template-columns: repeat(3, 1fr) 300px;
+}
+.grid .paren div:nth-child(odd) {
+    background-color: burlywood;
+    padding: 20px;
+    text-align: center;
+}
+.grid .paren div:nth-child(even) {
+    background-color: rgba(114, 1, 252, 0.452);
+    padding: 20px;
+    text-align: center;
+}
+
+
+
+.grid .paren div:nth-child(1) {
+    grid-column: 1/-1;
+}
+.grid .paren div:nth-child(5) {
+    grid-row: 2/4;
+    grid-column: 4/5;
+}
+.grid .paren div:nth-child(6) {
+    grid-column: 1/4;
+}
+.grid .paren div:nth-child(7) {
+    grid-column: 1/-1;
+}
